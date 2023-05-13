@@ -150,6 +150,17 @@ main{
     font-size: 15px;
 }
 
+.informacion::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    background-image: url("./imagenes/bi_exclamation-circle-fill.png");
+    background-repeat:no-repeat;
+    margin-right: 5px;
+}
+
 footer{
     display: inline-block;
     margin-top: 0% ;
