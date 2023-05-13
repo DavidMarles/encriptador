@@ -10,11 +10,12 @@
     padding-top: 20px;
     margin-left: 0%;
     width: 10%;
+    
 }
 
 main{
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     margin-left: 80px;
 }
 
@@ -22,7 +23,6 @@ main{
     border:none;
     color:#0A3871;
     margin-top: 90px;
-    text-transform: lowercase;
     resize:none;
 }
 
@@ -31,17 +31,54 @@ main{
         outline:none;
     }
 
+.resultado{
+    display:flex;
+    flex-direction: column;
+    width: 400px;
+    height: 580px;
+    margin-left: 300px;
+    background:white;
+    border:none;
+    border-radius:24px;
+    
+}
+
+.llamadaAccion{
+    order:2;
+    margin-top:430px;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: bold;
+    font-family: "Inter";
+    background:white;
+    color:#0A3871;
+    
+}
+
+.llamadaAccion p:nth-of-type(1){
+    font-size:20px;
+    background:white;
+   
+}
+
+.llamadaAccion p:nth-of-type(2){
+    font-size:15px;
+    background:white;
+   
+}
+
 .mensaje{
+    order:1;    
     background:white;
     background-image: url("./imagenes/Muñeco.png");
     background-repeat:no-repeat;
     border:none;
-    border-radius:24px;
     color:#0A3871;
-    margin-left:98px;
-    margin-top:20px;
+    margin-left:15px;
+    margin-top:10px;
     position:fixed;
     resize:none;
+    
 }
 
 .mensaje:focus{
@@ -51,6 +88,7 @@ main{
 .botones{
     display:flex;
     margin-top: 18px;
+    
 }
 
 .botonEncriptar{
@@ -61,6 +99,12 @@ main{
     cursor:pointer;
     height: 67px;
     width: 328px;
+    transition: 0.2s ease-in-out;
+    
+}
+
+.botonEncriptar:hover{
+    transform: scale(1.1);
 }
 
 .botonDesencriptar{
@@ -72,22 +116,47 @@ main{
     height: 67px;
     margin-left: 30px;
     width: 328px;
+    transition: 0.2s ease-in-out;
+    
 
 }
 
+.botonDesencriptar:hover{
+    transform: scale(1.1);
+}
+
 .botonCopiar{
+    order:3;
     border:1px solid #0A3871;
     border-radius:24px;
     color:#0A3871;
     cursor:pointer;
     height: 67px;
-    margin-left: 117px;
-    margin-top:402px;
+    margin-left: 33px;
+    margin-top:510px;
     position:absolute;
     width: 336px;
+    transition: 0.2s ease-in-out;
+    
+}
+
+.botonCopiar:hover{
+    margin-top:508ps;
+    transform: scale(1.1);
 }
 
 .informacion{
     color:#495057;
     font-size: 15px;
+}
+
+footer{
+    display: inline-block;
+    margin-top: 0% ;
+    margin-left: 100px;
+    font-size: 13px;
+    color:#495057;
+    
+    
+
 }

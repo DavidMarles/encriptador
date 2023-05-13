@@ -16,14 +16,16 @@ function botonEncriptar(){
 
 function encriptar(stringEncriptado){
     let matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
-    stringEncriptado = stringEncriptado.toLowerCase();
+    
 
-    const reglaString = /^[a-zA-Z ñÑ.,;:]+$/;
+    const reglaString = /^[a-z ñ.,;:]+$/;
     const textoCorrecto = reglaString.test(textArea.value);
 
     if(textoCorrecto){
         for(let i = 0; i < matrizCodigo.length; i++){
             if(stringEncriptado.includes(matrizCodigo[i][0])){
+                const llamadaAccion = document.querySelector(".llamadaAccion");
+                llamadaAccion.style.display = "none";
                 stringEncriptado = stringEncriptado.replaceAll(matrizCodigo[i][0],matrizCodigo[i][1]);
             }
         }
@@ -45,15 +47,17 @@ function botonDesencriptar(){
 
 function desencriptar(stringDesencriptado){
     let matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
-    stringDesencriptado = stringDesencriptado.toLowerCase();
-
-    const reglaString = /^[a-zA-Z ñÑ.,;:]+$/;
+    
+    const reglaString = /^[a-z ñ.,;:]+$/;
     const textoCorrecto = reglaString.test(textArea.value);
 
     if(textoCorrecto){
         for(let i = 0; i < matrizCodigo.length; i++){
             if(stringDesencriptado.includes(matrizCodigo[i][1])){
+                const llamadaAccion = document.querySelector(".llamadaAccion");
+                llamadaAccion.style.display = "none";
                 stringDesencriptado = stringDesencriptado.replaceAll(matrizCodigo[i][1],matrizCodigo[i][0]);
+                
             }
         }
         return stringDesencriptado;
@@ -61,7 +65,7 @@ function desencriptar(stringDesencriptado){
     else{
         alert("Por Favor, solo letras minúsculas de la a-z, no use acentos ni caracteres especiales.")
         mensaje.style.backgroundImage = url('./imagenes/Muñeco.png');
-        //mensaje.textContent = "Ningún Mensaje fue encontrado"
+        
     }
 }
 
